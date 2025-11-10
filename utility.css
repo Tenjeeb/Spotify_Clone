@@ -1,0 +1,25 @@
+.border{
+    border: 2px solid red;
+    /* margin: 2px; */
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.library-content{
+    margin: 20px 10px;
+    border-radius: 8px;
+    padding: 2px 14px;
+    color: white;
+    background-color: rgb(32, 31, 31);
+    font-size: 15px;  
+}
