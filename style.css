@@ -82,14 +82,20 @@ body {
     filter: invert(1);
 }
 
+
 .left {
     width: 29vw;
     background-color: rgba(24, 24, 24, 0.844);
+    max-height: 80vh;
+    overflow-y: auto;
+    margin-right: 8px;
+    border-radius: 10px;
 }
 
 .right {
     width: 79vw;
-   background-color: rgba(28, 28, 28, 0.694);
+   background-color: rgba(28, 28, 28, 0.758);
+   border-radius: 10px;
 }
 
 /* left side heading */
@@ -184,12 +190,13 @@ body {
 }
 
 /* Spotify playlist Trending songs */
-.spotifyPlaylist{
-    padding: 30px 30px;
-    margin-top: 10px;
+.right{
+    padding: 3px 35px;
+      max-height: 80vh;
+    overflow-y: scroll;
 
 }
-.spotifyPlaylist h1{
+.right h2{
     color: white;
 }
 
@@ -197,8 +204,8 @@ body {
 .cardContainer{
     display: flex;
     gap: 5px;
-    margin-top: 30px;
     flex-wrap: wrap;
+  
 }
 
 /* Designing card */
@@ -209,6 +216,8 @@ body {
     position: relative;
     transition: all ease;
     cursor: pointer;
+    max-height: 296px;
+    
 
 }
 
@@ -217,7 +226,7 @@ body {
    /* This is the hover inside the hover */
    .play{
     opacity: 1;
-    bottom: 122px;
+    bottom: 120px;
 }
 
 }
@@ -230,11 +239,13 @@ body {
 }
 
 .card img{
-    width: 88%;
-    object-fit: contain;
-    padding: 12px;
-    border-radius: 16px;
+    width: 90%;
+    object-fit: cove;
+    padding: 11px;
+    border-radius: 15px;
     padding-bottom: 0px;
+    max-height: 58%;
+    
 }
 
 
@@ -246,6 +257,20 @@ body {
     opacity: 0;
 }
 
+.right{
+    position: relative;
+}
+.playbar{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    padding: 12px;
+    background-color: green;
+}
+.songbutton{
+    gap: 15px;
+    justify-content: center;
+}
 
 
 

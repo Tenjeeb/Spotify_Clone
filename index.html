@@ -15,7 +15,7 @@
     <!-- <img id="logo" src="logo.svg" alt="spotify logo"> -->
     <!-- Margin is from the utility class here -->
 
-    <div class="nav flex border">
+    <div class="nav flex ">
         <div class="leftlogo flex">
             <ul>
                 <li><img class="invert" id="netflixlogo" src="logo.svg" alt=""></li>
@@ -30,6 +30,10 @@
                 <li>Download</li>
                 <li>|</li>
                 <li class="small">Install App</li>
+                <!----------------- Make these (optional) buttons with specific classes----------------->
+                <!-- Border: none;
+                outline: none; -->
+
                 <li class="small">Sign up</li>
                 <li id="login">Login</li>
 
@@ -39,9 +43,8 @@
     </div>
 
     <div class="container flex">
-
         <!-- left border -->
-        <div class="left border">
+        <div class="left ">
             <div class="heading flex align-center">
                 <h3>Your Library</h3>
                 <p class="plus">+</p>
@@ -86,37 +89,38 @@
 
 
         <!-- Right border -->
-        <div class="right border">
-            <div class="spotifyPlaylist">
-                <h1>Trending songs</h1>
-                <div class="cardContainer">
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50"
-                                role="img" aria-label="Play">
-                                <circle cx="50" cy="50" r="48" fill="#28a745" />
-                                <polygon points="40,30 40,70 70,50" fill="#000000" />
-                            </svg>
+        <div class="right ">
+            <div class="spotifyplaylist">
 
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e02d68f0d21c885b641d9c8a170" alt="">
-                        <h4>Kasari</h4>
-                        <p>Yabesh Thapa</p>
-                    </div>
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50"
-                                role="img" aria-label="Play">
-                                <circle cx="50" cy="50" r="48" fill="#28a745" />
-                                <polygon points="40,30 40,70 70,50" fill="#000000" />
-                            </svg>
+                    <h2>Trending songs</h2>
+            <div class="cardContainer">
+                <div class="card">
+                    <div class="play">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50" role="img"
+                            aria-label="Play">
+                            <circle cx="50" cy="50" r="48" fill="#28a745" />
+                            <polygon points="40,30 40,70 70,50" fill="#000000" />
+                        </svg>
 
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e023ba0d47aecae7e4ef8d0238a" alt="">
-                        <h4>John Rai : Maya Garnu la</h4>
-                        <p>John Rai</p>
                     </div>
-                    <div class="card">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02d68f0d21c885b641d9c8a170" alt="">
+                    <h4>Kasari</h4>
+                    <p>Yabesh Thapa</p>
+                </div>
+                <div class="card">
+                    <div class="play">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50" role="img"
+                            aria-label="Play">
+                            <circle cx="50" cy="50" r="48" fill="#28a745" />
+                            <polygon points="40,30 40,70 70,50" fill="#000000" />
+                        </svg>
+
+                    </div>
+                    <img src="https://i.scdn.co/image/ab67616d00001e023ba0d47aecae7e4ef8d0238a" alt="">
+                    <h4>John Rai : Maya Garnu la</h4>
+                    <p>John Rai</p>
+                </div>
+                <!-- <div class="card">
                         <div class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50"
                                 role="img" aria-label="Play">
@@ -154,14 +158,24 @@
                         <img src="https://i.scdn.co/image/ab67616d00001e0211930809bbc858da89a09d17" alt="">
                         <h4>Nihita</h4>
                         <p>John Rai</p>
-                    </div>
+                    </div> -->
+            </div>
 
-
+            <div class="playbar">
+                <div class="songbutton flex">
+                    <img src="previousbtn.svg" alt="">
+                    <img src="playbtn.svg" alt="">
+                    <img src="nextbtn.svg" alt="">
                 </div>
             </div>
         </div>
 
+        </div>
+    
+
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
