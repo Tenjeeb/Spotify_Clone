@@ -89,12 +89,14 @@ body {
 
 
 .left {
-    width: 29vw;
+    /* width: 30vw; */
     background-color: rgba(24, 24, 24, 0.844);
     overflow-y: auto;
     margin-right: 8px;
     border-radius: 10px;
     position: relative;
+    overflow-x: auto;
+    
 }
 
 .right {
@@ -106,7 +108,7 @@ body {
 /* left side heading */
 .heading {
     justify-content: space-between;
-    padding: 0 23px;
+    padding: 10px 23px;
     color: white;
     font-size: small;
 }
@@ -117,14 +119,39 @@ body {
 
 
 /* library section */
-.songList {
-    padding-left: 10px;
+.songList ul{
+    padding: 0px 35px;  
 }
 .songList ul li {
-    list-style-type: decimal;
-    padding: 10px;
+    display: flex;
     cursor: pointer;
+    gap: 25px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 15px 10px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
 }
+
+.songList img{
+    width: 30px;
+    
+}
+.songList .playbtn{
+    width: 30px;
+    
+}
+
+.playnow{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
 
 
 
