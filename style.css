@@ -84,7 +84,7 @@ body {
 
 /* container */
 .container{
-    min-height: 90vh;
+    max-height: 88vh;
 }
 
 
@@ -95,7 +95,6 @@ body {
     margin-right: 8px;
     border-radius: 10px;
     position: relative;
-    overflow-x: auto;
     
 }
 
@@ -119,28 +118,41 @@ body {
 
 
 /* library section */
+.songList{
+    height: 485px;
+    overflow: auto;
+}
+
 .songList ul{
-    padding: 0px 35px;  
+    padding: 0px 20px;  
+    margin-top: -15px;
 }
 .songList ul li {
     display: flex;
+    justify-content: space-between;
     cursor: pointer;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid white;
     margin: 15px 10px;
-    flex-wrap: wrap;
     overflow-x: hidden;
+    font-size: 15px;
+}
+
+
+
+.songList .info{
+    width: 250px;
 }
 
 .songList img{
-    width: 30px;
+    width: 25px;
     
 }
 .songList .playbtn{
-    width: 30px;
+    width: 25px;
     
 }
 
@@ -155,11 +167,8 @@ body {
 
 
 
-
-
-
 /* left side last part */
-.last{
+.last .second{
     margin-bottom: 10px;
 }
 
@@ -183,7 +192,7 @@ body {
 .language{
      font-size: 13px;
      margin-left: 20px;
-     margin-top: 30px;
+     margin-top: 10px;
 }
 .language h4{
     border: 1px solid white;
@@ -202,6 +211,9 @@ body {
     padding-left: 5px;
     
     
+}
+footer{
+    margin-top: 10px;
 }
 
 /* Spotify playlist Trending songs */
@@ -254,7 +266,6 @@ body {
 
 .card img{
     width: 90%;
-    object-fit: cove;
     padding: 11px;
     border-radius: 15px;
     padding-bottom: 0px;
@@ -277,13 +288,20 @@ body {
 .playbar{
     position: absolute;
     bottom: 0;
-    width: 90%;
-    padding: 12px;
-    background-color: rgb(236, 240, 236);
+   width: 92%;
+    padding: 5px;
+    background-color: rgb(55, 56, 55);
+    border-radius: 20px;
 }
+
 .songbutton{
     gap: 15px;
     justify-content: center;
+ 
+}
+
+.songbutton img{
+    width: 40px;
 }
 
 

@@ -1,4 +1,3 @@
-console.log("Lets write js")
 
 // This function will bring the songs from the server because we are not using backend here
 async function getSongs() {
@@ -31,14 +30,20 @@ async function main(){
    let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
    for (const song of songs) {
     let decoded = decodeURIComponent(song).replace(/^\\/, " ")  // decode the URL encoded format and replace / after decoding it
-    songUL.innerHTML = songUL.innerHTML + `<li> ${decoded} </li>`
+    songUL.innerHTML = songUL.innerHTML + `<li> 
+                    <img src="music.svg" alt="">
+                    <div class="info">
+                        <div>${decoded} </div>
+                    </div>
+                    <div class="playnow">
+                        <span>Play Now</span>
+                        <img class="playbtn" src="playbtn.svg" alt="">
+                    </div> </li>`
    }
     
     // play the first song
     var audio = new Audio(songs[0])
     audio.play() 
-
-
 
     audio.addEventListener("ontimeupdate",  () =>{
         let duration = audio.duration
@@ -47,6 +52,7 @@ async function main(){
     }) 
    
 }
+
 main()
 
 
