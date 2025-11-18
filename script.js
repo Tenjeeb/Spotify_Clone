@@ -35,12 +35,14 @@ async function getSongs() {
 }
 
 // Making function for playing music
-const playMusic = (track) => {
+const playMusic = (track, pause = false) => {
     // let audio = new Audio("/songs/" + track)
     currentSong.src = "/songs/" + track
-    currentSong.play()  // This will play one song at a time
-    play.src = "pausebtn.svg"   // svg image of pause
-    document.querySelector(".songinfo").innerHTML = track
+    if(!pause){
+        currentSong.play()  // This will play one song at a time
+        play.src = "pausebtn.svg"   // svg image of pause
+    }
+    document.querySelector(".songinfo").innerHTML = decodeURI(track).replace(/^\\/, " ")
     document.querySelector(".songtime").innerHTML = "00 / 00" ///////////
 
 }
@@ -49,6 +51,7 @@ const playMusic = (track) => {
 async function main() {
     // get the list of all the songs
     let songs = await getSongs()
+    playMusic(songs[0], true )  // Play the first music
 
     // putting songname inside the ul li of html
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
@@ -96,8 +99,17 @@ async function main() {
     currentSong.addEventListener("timeupdate", () =>{
         console.log(currentSong.currentTime, currentSong.duration)
         document.querySelector(".songtime").innerHTML = `${formatTime(currentSong.currentTime)} / ${formatTime(currentSong.duration)}`
-        
+        document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%"
+    })
 
+    // Add event listener to seekbar (Moving the seekbar)
+    document.querySelector(".seekbar").addEventListener("click" , e=>{
+        console.log(e.offsetX)  // at first do console.log(e)
+        let percent = (e.offsetX/e.target.getBoundingClientRect().width) * 100
+        document.querySelector(".circle").style.left = percent + "%" 
+        currentSong.currentTime = ((currentSong.duration) * percent) / 100
+
+        
     })
 
 }
