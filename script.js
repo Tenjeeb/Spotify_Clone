@@ -112,6 +112,21 @@ async function main() {
         
     })
 
+    // Add event listener to the hamburger 
+    document.querySelector(".hamburger").addEventListener("click", () =>{
+        document.querySelector(".left").style.left = 0
+        document.querySelector(".leftlogo").style.left = 0
+        document.querySelector(".cross").style.left = "350px"
+
+    })
+    // Add event listener to the cross button
+    document.querySelector(".cross").addEventListener("click", () =>{
+        document.querySelector(".left").style.left = "-100%"
+        document.querySelector(".leftlogo").style.left = "-100%"
+        document.querySelector(".cross").style.left = "-100%"
+
+    })
+
 }
 
 main()
