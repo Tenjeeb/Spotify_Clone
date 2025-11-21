@@ -116,16 +116,27 @@ async function main() {
     document.querySelector(".hamburger").addEventListener("click", () =>{
         document.querySelector(".left").style.left = 0
         document.querySelector(".leftlogo").style.left = 0
-        document.querySelector(".cross").style.left = "350px"
+        document.querySelector(".cross").style.left = "320px"
 
     })
     // Add event listener to the cross button
     document.querySelector(".cross").addEventListener("click", () =>{
-        document.querySelector(".left").style.left = "-100%"
-        document.querySelector(".leftlogo").style.left = "-100%"
-        document.querySelector(".cross").style.left = "-100%"
+        document.querySelector(".left").style.left = "-120%"
+        document.querySelector(".leftlogo").style.left = "-120%"
+        document.querySelector(".cross").style.left = "-120%"
 
     })
+
+    // Reset sidebar when resizing to desktop
+    window.addEventListener("resize", () => {
+        if(window.innerWidth > 1400){
+            document.querySelector(".left").style.left = ""
+            document.querySelector(".leftlogo").style.left = ""
+            document.querySelector(".cross").style.left = ""
+        }
+    })
+
+    // Add event listener to previous and next button
 
 }
 
