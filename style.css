@@ -226,7 +226,7 @@ footer {
 /* Spotify playlist Trending songs */
 .right {
     padding: 3px 35px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .right h2 {
@@ -314,7 +314,7 @@ footer {
 }
 
 .songinfo,.songtime {
-    padding: 20px 10px;
+    padding: 20px 5px;
 }
 
 .songbutton {
@@ -331,13 +331,13 @@ footer {
 .timevol{
     display: flex;
     align-items: center;
-    width: 245px;
+    width: 220px;
     justify-content: space-around;
 }
 
 .volume{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 120px;
     align-items: center;
 }

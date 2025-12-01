@@ -153,6 +153,12 @@ async function main() {
             document.querySelector(".cross").style.left = ""
         }
     })
+
+    // Add an event to volumne button
+    volume.addEventListener("change", (e) => {
+        console.log(e, e.target, e.target.value)
+        currentSong.volume = parseInt(e.target.value) / 100 // volumne is from 0 to 1 for divide by 100 & parseInt convert the string into int
+    })
 }
 
 main()
