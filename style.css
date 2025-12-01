@@ -314,18 +314,35 @@ footer {
 }
 
 .songinfo,.songtime {
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 .songbutton {
     gap: 15px;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .songbutton img {
     width: 40px;
     cursor: pointer;
+}
+
+.timevol{
+    display: flex;
+    align-items: center;
+    width: 245px;
+    justify-content: space-around;
+}
+
+.volume{
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    align-items: center;
+}
+.range input{
+    width: 80px;
 }
 
 /* seebar */
@@ -350,8 +367,10 @@ footer {
     transition: left 0.2s;
 }
 
+
+
 /* Media query */
-@media (max-width: 1400px) {
+@media (max-width: 700px) {
     .left,
     .leftlogo,
     .cross {

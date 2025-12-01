@@ -153,9 +153,6 @@ async function main() {
             document.querySelector(".cross").style.left = ""
         }
     })
-
-
-
 }
 
 main()
