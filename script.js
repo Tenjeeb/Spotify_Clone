@@ -1,8 +1,8 @@
 // List of songs
 const songs = [
-    "Hassan _ Roshaan - Duur Se.mp3",
-    "Passenger _ Let Her Go.mp3",
-    "Under Your Spell - Desire (Drive).mp3"
+    "Hassan_Roshaan-Duur Se.mp3",
+    "Passenger_Let_Her_Go.mp3",
+    "Under_Your_Spell-Desire(Drive).mp3"
 ]
 
 // Create the audio player object
@@ -48,6 +48,7 @@ main();
 
 
 // Add event listener for play/pause
+let play = document.getElementById("play")
 play.addEventListener("click", () => {
     if (currentSong.paused) {
         currentSong.play()
