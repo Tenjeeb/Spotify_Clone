@@ -1,7 +1,7 @@
 // List of songs
 const songs = [
-    "Passenger _ Let Her Go.mp3",
     "Hassan _ Roshaan - Duur Se.mp3",
+    "Passenger _ Let Her Go.mp3",
     "Under Your Spell - Desire (Drive).mp3"
 ]
 
@@ -23,11 +23,19 @@ function playMusic(track, pause = false) {
 function loadSongList() {
     let ul = document.querySelector(".songList ul");
     songs.forEach(song => {
-        ul.innerHTML += `
-      <li onclick="playMusic('${song}')">
-        ${song}
-      </li>
-    `;
+        ul.innerHTML += 
+        `<li>
+                <img src="music.svg" alt="">
+                <div class="info">
+                    <div>${song}</div> 
+                </div>
+                <div class="playnow">
+                    <span>Play Now</span>
+                    <img class="playbtn" src="playbtn.svg" alt="">
+                </div>
+            </li>`
+     
+
     });
 }
 
@@ -119,14 +127,11 @@ seekbar.addEventListener("click", (e) => {
 })
 
 // Volume control button
-currentSong.volume = 0.5
+currentSong.volume = 0.3
 volume.addEventListener("input", (e) => {
     console.log(e.target.value); // Value betwen 0 and 100
     currentSong.volume = parseInt(e.target.value) / 100
 })
-
-
-
 
 
 // Add event listener to the hamburger 
@@ -143,18 +148,5 @@ document.querySelector(".cross").addEventListener("click", () => {
     document.querySelector(".cross").style.left = "-120%"
 
 })
-
-
-function loadSongList() {
-    let ul = document.querySelector(".songList ul");
-
-    songs.forEach(song => {
-        ul.innerHTML += `
-      <li onclick="playMusic('${song}')">
-        ${song}
-      </li>
-    `;
-    });
-}
 
 
