@@ -10,7 +10,7 @@ const currentSong = new Audio();
 
 // Function to play the song
 function playMusic(track, pause = false) {
-    currentSong.src = "/songs/" + track
+    currentSong.src = "songs/" + track
     if (!pause) {
         currentSong.play()
         play.src = "pausebtn.svg"
