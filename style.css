@@ -386,7 +386,6 @@ footer {
         overflow-y: hidden;
     }
 
-
     .cardContainer {
         justify-content: center;
         max-width: 280px;
@@ -405,7 +404,7 @@ footer {
         align-items: center;
         padding: 0px 4px;
         gap: 2px;
-        bottom: 15px;
+        bottom: 10px;
     }
 
     .songbutton {
