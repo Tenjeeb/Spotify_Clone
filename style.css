@@ -388,7 +388,7 @@ footer {
     .cardContainer {
         justify-content: center;
         max-width: 290px;
-        max-height: 380px;
+        max-height: 385px;
     }
 
     .card:nth-child(1){
