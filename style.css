@@ -372,6 +372,9 @@ footer {
         width: 370px;
         background-color: black;
     }
+    .info{
+        font-size: 14px
+    }
 
     .right {
         width: 100vw;
@@ -435,5 +438,9 @@ footer {
          bottom: 155px;
      }
     }
+
+    .songList {
+    height: 430px;
+}
 
 }
