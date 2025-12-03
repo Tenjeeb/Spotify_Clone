@@ -14,18 +14,13 @@
 </head>
 
 <body>
-    <!-- <img id="logo" src="logo.svg" alt="spotify logo"> -->
-    <!-- Margin is from the utility class here -->
-
     <div class="nav flex ">
         <div class="hamburger">
             <img src="hamburger.svg" alt="">
         </div>
         <div class="leftlogo flex">
             <ul>
-                <li><img class="invert" id="netflixlogo" src="logo.svg" alt=""></li>
-                <li><img class="logos invert" src="home.svg" alt=""></li>
-                <li><img class="logos search invert" src="search.svg" alt=""></li>
+                <li><img class="invert" id="logo" src="logo.svg" alt=""></li>
             </ul>
         </div>
         <div class="cross" >
@@ -33,11 +28,6 @@
         </div>
         <div class="rightlogo flex">
             <ul>
-                <li>Premium</li>
-                <li>Support</li>
-                <li>Download</li>
-                <li>|</li>
-                <li class="small">Install App</li>
                 <li class="small">Sign up</li>
                 <li id="login">Login</li>
             </ul>
@@ -77,13 +67,7 @@
                         <li>PivacyPolicy</li>
                     </ul>
                 </div>
-                <div class="last second flex">
-                    <ul>
-                        <li>Cookies</li>
-                        <li>About Ads</li>
-                        <li>Accessibility</li>
-                    </ul>
-                </div>
+
                 <div class="language">
                     <h4><img class="invert" src="language.svg" alt="">English</h4>
                 </div>
@@ -95,21 +79,20 @@
             <div class="spotifyplaylist">
                 <h2>Trending songs</h2>
                 <div class="cardContainer">
-                    <div class="card">
+                    <div class="card album" data-album="trending">
                         <div class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50"
                                 role="img" aria-label="Play">
                                 <circle cx="50" cy="50" r="48" fill="#28a745" />
                                 <polygon points="40,30 40,70 70,50" fill="#000000" />
                             </svg>
-
                         </div>
                         <img src="https://i.scdn.co/image/ab67616d00001e02d68f0d21c885b641d9c8a170" alt="">
                         <h4>Kasari</h4>
                         <p>Yabesh Thapa</p>
                     </div>
     
-                    <div class="card">
+                    <div class="card album" data-album="love">
                         <div class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50"
                                 role="img" aria-label="Play">
